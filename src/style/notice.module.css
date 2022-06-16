@@ -1,0 +1,43 @@
+.notice {
+  width: 100%;
+  max-width: 1200px;
+  height: auto;
+  padding: 3rem 1rem;
+  margin: 1rem auto;
+  background-color: #fff;
+}
+
+.notice h2 {
+  font-size: 2rem;
+}
+
+.notice ul {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto;
+  width: 900px;
+  height: auto;
+  min-height: 200px;
+}
+.notice ul li {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.thumbnailBox {
+  width: 210px;
+  height: 118px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.profileBox img {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  margin: -1px 9px 0 0;
+}
+.playBox {
+  width: 210px;
+  height: 25px;
+  display: flex;
+  flex-direction: row;
+}

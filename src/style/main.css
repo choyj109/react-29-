@@ -28,7 +28,7 @@
   flex-wrap: nowrap;
 }
 .mainContainer .viewContents li {
-  flex-shrink: 1;
+  flex-shrink: 0;
   width: var(--list-size);
   height: 500px;
   font-size: 4rem;

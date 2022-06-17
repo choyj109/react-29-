@@ -6,6 +6,7 @@ import CardList from "./components/CardList";
 import { Routes, Route, BrowserRouter } from "react-router-dom";
 import Notice from "./components/Notice";
 import Event from "./components/Event";
+import Form from "./components/Form";
 import { Manual, Policy, Rule, EtcInfo } from "./pages/FooterMenu";
 /* 
  Routes 감싸주는 아이 Route 그 안에 내부에들어 가는 아이 
@@ -33,6 +34,7 @@ function App() {
           <Route path="/rule" element={<Rule />} />
           <Route path="/etcInfo" element={<EtcInfo />} />
           <Route path="/event" element={<Event />} />
+          <Route path="/form" element={<Form />} />
         </Routes>
         <Footer title={title} />
       </BrowserRouter>

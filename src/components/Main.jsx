@@ -8,7 +8,9 @@ const Main = () => {
   const checkRef = useRef("next");
   /* console.log(checkRef); {current:'next'}
   useRef는 객체 타입으로 값을 저장하고 사용할 수 있다.
+  컴포넌트 함수를 재 렌더링하는 기능은 없다.
   useRef 선택자 querySelector 대신 사용하기도 함 */
+
   // listData.unshift("more1");
   listData.unshift(listData[listData.length - 1]);
 
@@ -74,7 +76,11 @@ const Main = () => {
       <div className="viewContents">
         <ul style={slideStyle}>
           {listData.map((list, index) => {
-            return <li className={fncClassAdd(index)}>{list}</li>;
+            return (
+              <li className={fncClassAdd(index)} key={index}>
+                {list}
+              </li>
+            );
           })}
           {/* <li className="view_01 on">01</li> */}
         </ul>

@@ -1,4 +1,5 @@
 import React from "react";
+import "./../style/container.css";
 import { MdFavorite } from "react-icons/md";
 import { useState } from "react";
 
@@ -13,7 +14,6 @@ const Card = ({ card }) => {
   const fncFav = (e) => {
     setFav(fav === 0 ? 1 : 0);
     setCheckState(e.target.checked);
-    // check 여부 확인
   };
 
   return (
@@ -29,12 +29,11 @@ const Card = ({ card }) => {
       <div className="btns">
         <input
           type="checkbox"
-          className="blind"
           id={card.checkName}
           name={card.checkName}
           data-checked={checkState}
           onChange={fncFav}
-          value="checked"
+          className="blind"
         />
         <label htmlFor={card.checkName} style={btnColor[fav]}>
           좋아요

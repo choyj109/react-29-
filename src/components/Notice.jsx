@@ -2,11 +2,12 @@ import React from "react";
 import NoticeStyle from "../style/notice.module.css";
 import { useState, useEffect } from "react";
 import NoticeItem from "./NoticeItem";
+import { IoChevronDownOutline, IoChevronUpOutline } from "react-icons/io5";
 
 const Notice = () => {
-  const listPlusNum = 10;
+  const listNum = 10;
   const [noticeList, setNoticeList] = useState([]);
-  const [moreNum, setMorenum] = useState(listPlusNum);
+  const [moreNum, setMorenum] = useState(listNum);
   const dataUrl = "./data/noticeData.json";
   useEffect(() => {
     (async () => {
@@ -16,7 +17,7 @@ const Notice = () => {
     })();
   }, []);
   const fncMore = () => {
-    setMorenum(moreNum + listPlusNum);
+    setMorenum(moreNum === listNum ? moreNum + listNum : moreNum - listNum);
   };
   const viewData = noticeList.filter((data, index) => index < moreNum);
 
@@ -30,7 +31,14 @@ const Notice = () => {
       </ul>
       <div className={NoticeStyle.moreBtn}>
         <button type="button" onClick={fncMore}>
-          인기영상 펼쳐보기
+          <span>
+            인기영상 <b>{moreNum === listNum ? "펼쳐보기": "접어두기"}</b>
+          </span>
+          {moreNum === listNum ? (
+            <IoChevronDownOutline />
+          ) : (
+            <IoChevronUpOutline />
+          )}
         </button>
       </div>
     </div>

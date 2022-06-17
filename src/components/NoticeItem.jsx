@@ -1,22 +1,32 @@
 import React from "react";
 import NoticeStyle from "../style/notice.module.css";
-import { Link } from "react-router-dom";
-import { IoPlayOutline } from "react-icons/io5";
+import { IoPlayOutline, IoPlay } from "react-icons/io5";
 
 const NoticeItem = ({ data, index }) => {
   return (
     <li key={data.id}>
       <div className={NoticeStyle.thumbnailBox}>
-        <img src={data.thumbnail} alt={data.title} />
+        <a href="#">
+          <img src={data.thumbnail} alt={data.title} />
+          <div className={NoticeStyle.ioPlay}>
+            <IoPlay />
+          </div>
+          <span>{data.time}</span>
+        </a>
       </div>
       <div className={NoticeStyle.profileBox}>
-        <img src={data.profile} alt={data.name} />
-        <span>{data.name}</span>
+        <a href="#">
+          <img src={data.profile} alt={data.name} />
+          <span>{data.name}</span>
+        </a>
+      </div>
+      <div className={NoticeStyle.titleBox}>
+        <a href="#">{data.title}</a>
       </div>
       <div className={NoticeStyle.playBox}>
         <IoPlayOutline />
         <span>{data.play} · </span>
-        <span> {data.before}</span>
+        <span>{data.before}</span>
       </div>
     </li>
   );

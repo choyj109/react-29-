@@ -15,6 +15,10 @@ const Card = ({ card }) => {
     setFav(fav === 0 ? 1 : 0);
     setCheckState(e.target.checked);
   };
+  const [cardItem, setCardItem] = useState();
+  const fncView = () => {
+    setCardItem()
+  };
 
   return (
     <li>
@@ -39,7 +43,7 @@ const Card = ({ card }) => {
           좋아요
           <MdFavorite style={favListColor[fav]} />
         </label>
-        <a className="link" href={card.dataLink}>
+        <a className="link" href={card.dataLink} onClick={fncView}>
           상세보기
         </a>
       </div>

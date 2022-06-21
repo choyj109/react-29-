@@ -32,7 +32,7 @@ const Notice = () => {
       <div className={NoticeStyle.moreBtn}>
         <button type="button" onClick={fncMore}>
           <span>
-            인기영상 <b>{moreNum === listNum ? "펼쳐보기": "접어두기"}</b>
+            인기영상 <b>{moreNum === listNum ? "펼쳐보기" : "접어두기"}</b>
           </span>
           {moreNum === listNum ? (
             <IoChevronDownOutline />

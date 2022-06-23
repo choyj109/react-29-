@@ -39,6 +39,7 @@ const CardList = () => {
           <Card key={card.id} card={card} />
         ))}
       </ul>
+      
     </div>
   );
 };

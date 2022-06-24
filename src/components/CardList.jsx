@@ -5,7 +5,6 @@ import axios from "axios";
 import "../style/container.css";
 import Detail from "./Detail";
 import "../style/container.css";
-import { Link } from "react-router-dom";
 
 const CardList = () => {
   const [cardData, setCardData] = useState([]);
@@ -73,7 +72,7 @@ const CardList = () => {
         ))}
       </div>
       <div className="detail">
-        {code.map((data, index) => (
+        {code.map((data) => (
           <Detail key={data.id} data={data} />
         ))}
       </div>

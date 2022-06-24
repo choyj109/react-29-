@@ -10,9 +10,13 @@
   display: flex;
   justify-content: center;
 }
+.detail-area.hidden {
+  display: none;
+}
 .modal {
   width: 500px;
   height: 500px;
+  border-radius: 5px;
   margin: auto;
   background-color: #fff;
   display: flex;
@@ -21,8 +25,9 @@
   align-items: center;
 }
 .detail-area img {
-  width: 200px;
-  height: 150px;
+  width: auto;
+  height: 160px;
+  border-radius: 0.3rem;
 }
 .detail-desc {
   display: flex;

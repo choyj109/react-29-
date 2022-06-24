@@ -15,11 +15,6 @@ const Card = ({ card }) => {
     setFav(fav === 0 ? 1 : 0);
     setCheckState(e.target.checked);
   };
-  const [modal, setModal] = useState(0);
-  const fncModal = (e) => {
-    e.preventDefault();
-    setModal(modal === 0 ? 1 : 0);
-  };
 
   return (
     <li>
@@ -44,11 +39,7 @@ const Card = ({ card }) => {
           좋아요
           <MdFavorite style={favListColor[fav]} />
         </label>
-        <a className="link" href={card.dataLink} onClick={fncModal}>
-          상세보기
-        </a>
       </div>
-      <div className="modal"></div>
     </li>
   );
 };
